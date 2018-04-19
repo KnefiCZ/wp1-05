@@ -8,12 +8,14 @@
     <h1>Bezdomovec</h1>
 <?php
 
-    $vodkaPrice = 130 ;
+    $vodkaPrice = 150 ;
+    $cigaPrice = 100 ;
     $homelessMoney = 25 ;
     $studentka = 17 ;
     $Boi = 40 ;
-    $podnikatel = 100 ;
-    $nigger = 50
+    $podnikatel = 200 ;
+    $nigger = 50 ;
+    $bezdakKombo = $vodkaPrice+$cigaPrice;
 
  ?>
 
@@ -38,10 +40,19 @@
 
     ?>
    </p>
-   <?php if ($homelessMoney >= $vodkaPrice) { $homelessMoney =  $homelessMoney - $vodkaPrice ; ?>
-    Bezďák má vodku a  <?php } ?>
    <?php
-    echo "zbytek bezdomovo zisku po návštěvě večerky: $homelessMoney" ;
+if
+  ($homelessMoney >= $bezdakKombo)
+    { $homelessMoney =  $homelessMoney - $bezdakKombo ;
+    echo"Bezďák má vodku a cíga a ";                             }
+elseif
+  ($homelessMoney >= $cigaPrice)
+    {$homelessMoney = $homelessMoney - $cigaPrice ;
+    echo "Bezďák neměl cash na Vodku tak si koupil jen cíga. ";  }
+ else {
+      echo "Bezďák odchází s prázdnou. ";
+    }
+     echo "zbytek bezdomovo zisku po návštěvě večerky: $homelessMoney" ;
     ?>
   </body>
 </html>
